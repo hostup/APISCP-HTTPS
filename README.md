@@ -1,4 +1,4 @@
-# Check SSLv2 Domains Script
+# Check SSLv2 Domains Script made for https://apiscp.com
 
 This script examines SSL certificates located in the `/home/virtual/*/fst/etc/httpd/conf/ssl.crt/` directory. It extracts domain names from the 'Subject Alternative Name' section of each certificate. For wildcard domains (e.g., `*.domain.tld`), it considers the equivalent `www.domain.tld`. The script then checks if the domain's IP is not within Cloudflare's IP range. Valid domains meeting the criteria are saved to `/etc/httpd/conf.d/ssl_domains.txt`.
 
