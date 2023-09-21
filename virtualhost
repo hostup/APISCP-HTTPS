@@ -1,0 +1,3 @@
+RewriteCond %{HTTPS} off
+RewriteCond ${ssl_domains:%{HTTP_HOST}|NOT_FOUND} =1
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
